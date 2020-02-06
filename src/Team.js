@@ -2,7 +2,7 @@ import React from "react";
 import "./Team.css";
 
 const Team = props => {
-  const percentage = Number(props.score / props.shotsTaken).toFixed(2);
+  const percentage = Math.round((props.score / props.shotsTaken) * 100);
   const { name, logo, shotsTaken, score, side, handleShoot } = props;
   return (
     <div className="Team">
